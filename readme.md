@@ -11,4 +11,4 @@ We can move the blank space by typing the number you want to switch it with , bu
 
 The goal of this game is to make the pattern look like the image below.
 
-<img src="Winning_pattern.png" width="400">
+<img src="https://github.com/user-attachments/assets/4aa223e0-5d18-4672-aad6-e3148e8b399b" width="400">
