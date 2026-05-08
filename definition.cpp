@@ -1,4 +1,5 @@
 #include <iostream>
+#include "algo.h"
 #include <random>
 #include "puzzle.h"
 
@@ -74,10 +75,15 @@ void puzzle::start(){
     int win{};
 
     while(true){
-        std::cout<<" ENTER NUMBER TO SWITCH "<<std::endl;
+        std::cout<<" ENTER NUMBER TO SWITCH OR ENTER 999 TO RUN ALGORITHM FROM CURRENT STATE "<<std::endl;
         int inp{};
         std::cin>>inp;
         win=0;
+
+        if(inp == 999){
+            int ini_arr[9] = {0,1,2,3,4,5,6,7,8};
+            real_deal(ini_arr,arr);
+        }
 
         for(int i=0;i<9;++i){
             if(arr[i]==inp){
