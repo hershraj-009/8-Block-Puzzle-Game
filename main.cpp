@@ -3,6 +3,9 @@
 #include "puzzle.h"
 
 int main(){
+
+try{
+
 puzzle obj;
 
 int choice{};
@@ -24,6 +27,11 @@ real_deal(ini_arr,win);
 
 else{
     std::cout<<" ENTER A VALID CHOICE "<<std::endl;
+}
+}
+
+catch(int jump){
+    std::cout<<"-------- VICTORY -------- "<<std::endl;
 }
 
 }

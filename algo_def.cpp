@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
 #include "algo.h"
 #include "puzzle.h"
 
@@ -185,7 +184,11 @@ void win_case(metadata *obj){
         }
         std::cout<<"-------"<<std::endl;
 
+        metadata *temp_obj = obj;
         obj=obj->par_add;
+        temp_obj->par_add = nullptr;
+        delete temp_obj;
+        temp_obj = nullptr;
     }
 
     std::cout<<"_______"<<std::endl;
@@ -203,7 +206,10 @@ void win_case(metadata *obj){
     }
     std::cout<<"-------"<<std::endl;
 
+    delete obj;
+    obj = nullptr;
+
     std::cout<<" Total number of steps taken : "<<steps+1<<std::endl;
 
-    exit(0);
+    throw 999;
 }
